@@ -250,19 +250,70 @@ input:focus {
   transform: scale(0.95);
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE PRO */
 @media (max-width: 700px) {
+
+  /* 🔥 HERO: mantener layout horizontal */
   .hero-content {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row; /* 🔥 clave */
+    align-items: center;
+    gap: 15px;
   }
 
-  .hero-texto {
-    text-align: center;
-    max-width: 100%;
-  }
-
+  /* 🔥 LOGO más pequeño */
   .logo {
-    width: 140px;
+    width: 120px;
+  }
+
+  /* 🔥 TEXTO compacto */
+  .hero-texto h1 {
+    font-size: 22px;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-texto h2 {
+    font-size: 16px;
+  }
+
+  .hero-sub {
+    font-size: 12px;
+  }
+
+  /* 🔥 INPUT adaptado */
+  input {
+    max-width: 100%;
+    font-size: 13px;
+    padding: 12px 14px;
+  }
+
+  /* 🔥 GRID: 2 COLUMNAS */
+  #catalogo {
+    grid-template-columns: repeat(2, 1fr); /* 🔥 clave */
+    gap: 15px;
+    padding: 30px 10px;
+  }
+
+  /* 🔥 TARJETAS más compactas */
+  .producto {
+    min-height: 320px;
+    padding: 12px;
+  }
+
+  .producto img {
+    height: 140px;
+  }
+
+  .producto h3 {
+    font-size: 13px;
+    height: 38px;
+  }
+
+  .precio {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 10px;
   }
 }
